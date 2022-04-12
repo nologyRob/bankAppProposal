@@ -34,7 +34,7 @@ public class Main {
                     quit = true;
                     break;
                 case 1:
-                    System.out.println("\n Let's add a name to your bank!");
+                    System.out.println("\n Let's create a bank!");
                     break;
                 case 2:
                     System.out.println("\n Let's add a branch!");
