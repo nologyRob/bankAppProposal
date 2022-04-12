@@ -6,6 +6,8 @@ import java.util.Scanner;
 
 public class Main {
 
+    public List<Branch> branches;
+
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -49,11 +51,20 @@ public class Main {
                     System.out.println("\n What is the initial value of their account?");
                     double initialValue = scanner.nextDouble();
 
-
                     //Opportunity to learn about creating a new object
                     Customer customer = new Customer(firstName, lastName, initialValue);
                     System.out.println("You have added a customer with the name " + customer.getFirstName() + " " + customer.getLastName() + " their balance is $" + customer.getInitialAmount());
+                    System.out.println("Which branch would you like this customer to be added to?");
+                    String targetBranch = scanner.nextLine();
+
                     break;
+                case 4:
+                    System.out.println("\n Let's add a branch!");
+                    System.out.println("\n What is the first name of the branch you would like to add?");
+                    String branchName = scanner.nextLine();
+                    Branch newBranch = new Branch(branchName);
+                    System.out.println("You have added a branch with the name " + newBranch.getBranchName());
+
                 default:
                     System.out.println("Incorrect option chosen, quitting application");
                     quit = true;
